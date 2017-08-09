@@ -1,7 +1,4 @@
 
-Assuming you have unzipped to a working directory on one of the OSU 
-three flip servers:
-
 zip payload:
 	README.txt (this file)
 	makefile
