@@ -1,7 +1,5 @@
 /**************************************************************************************
 * Program main.c is the driver file for the ftserver compilation.
-* Chris Kearns, CS372-400-Spring_2017, Project 2, 4 June 2017
-* kearnsc@oregonstate.edu
 * To start the server: ftserver <Port>, to stop the server, Ctrl-c
 * Program is the server side of an ftp directory and file transfer program
 * utilizing defined ports from 1024 to 65535 and the commands -l and -g.
