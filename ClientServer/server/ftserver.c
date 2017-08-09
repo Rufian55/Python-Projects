@@ -1,7 +1,5 @@
 /********************************************************************************
 * Program ftserver.c is the definitions file for the ftserver compilation.
-* Chris Kearns, CS372-400-Spring_2017, Project 2, 4 June 2017
-* kearnsc@oregonstate.edu
 *********************************************************************************/
 #include "ftserver.h"
 
