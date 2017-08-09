@@ -1,0 +1,1264 @@
+{
+	"variables": [],
+	"info": {
+		"name": "HarborMaster",
+		"_postman_id": "119bcf71-e908-f12d-7f91-f36a6c33bfaf",
+		"description": "BoatSlipsInc but set up for app deploy.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "newBoat_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newBoat_1_ID\");",
+							"postman.setEnvironmentVariable(\"newBoat_1_ID\", jsonData.id);",
+							"",
+							"tests[\"Test A_01\"] = jsonData.at_sea === true;",
+							"tests[\"Test A_02\"] = jsonData.length == 111;",
+							"tests[\"Test A_03\"] = jsonData.type == \"Boat Type 01\";",
+							"tests[\"Test A_04\"] = jsonData.name == \"Boat Name 01\";",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Boat Name 01\",\n\t\"type\": \"Boat Type 01\",\n\t\"length\": 111\n}"
+				},
+				"description": "Creates a new boat with at_sea == True"
+			},
+			"response": []
+		},
+		{
+			"name": "newBoat_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newBoat_2_ID\");",
+							"postman.setEnvironmentVariable(\"newBoat_2_ID\", jsonData.id);",
+							"",
+							"tests[\"Test B_01\"] = jsonData.at_sea === true;",
+							"tests[\"Test B_02\"] = jsonData.length == 222;",
+							"tests[\"Test B_03\"] = jsonData.type == \"Boat Type 02\";",
+							"tests[\"Test B_04\"] = jsonData.name == \"Boat Name 02\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Boat Name 02\",\n\t\"type\": \"Boat Type 02\",\n\t\"length\": 222\n}"
+				},
+				"description": "Creates a new boat with at_sea == True"
+			},
+			"response": []
+		},
+		{
+			"name": "newBoat_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newBoat_3_ID\");",
+							"postman.setEnvironmentVariable(\"newBoat_3_ID\", jsonData.id);",
+							"",
+							"tests[\"Test C_01\"] = jsonData.at_sea === true;",
+							"tests[\"Test C_02\"] = jsonData.length == 333;",
+							"tests[\"Test C_03\"] = jsonData.type == \"Boat Type 03\";",
+							"tests[\"Test C_04\"] = jsonData.name == \"Boat Name 03\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Boat Name 03\",\n\t\"type\": \"Boat Type 03\",\n\t\"length\": 333\n}"
+				},
+				"description": "Creates a new boat with at_sea == True"
+			},
+			"response": []
+		},
+		{
+			"name": "newSlip_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newSlip_1_ID\");",
+							"postman.setEnvironmentVariable(\"newSlip_1_ID\", jsonData.id);",
+							"",
+							"tests[\"Test D_01\"] = jsonData.number == 1;",
+							"tests[\"Test D_02\"] = jsonData.current_boat === null;",
+							"tests[\"Test D_03\"] = jsonData.arrival_date === null;",
+							"tests[\"Test D_04\"] = jsonData.departure_history.departure_date === null;",
+							"tests[\"Test D_04\"] = jsonData.departure_history.departed_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Slip",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "newSlip_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newSlip_2_ID\");",
+							"postman.setEnvironmentVariable(\"newSlip_2_ID\", jsonData.id);",
+							"",
+							"tests[\"Test E_01\"] = jsonData.number == 2;",
+							"tests[\"Test E_02\"] = jsonData.current_boat === null;",
+							"tests[\"Test E_03\"] = jsonData.arrival_date === null;",
+							"tests[\"Test E_04\"] = jsonData.departure_history.departure_date === null;",
+							"tests[\"Test E_04\"] = jsonData.departure_history.departed_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Slip",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test F_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_1_ID\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_1_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getSlipByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test G_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newSlip_1_ID\")"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_1_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID No ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test Err_404 NO_BOAT_ID\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat/Boat/",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getSlipByID No ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test Err_404 NO_SLIP_ID\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Slip/Slip",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID Bad ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test Err_404 BAD_BOAT_ID\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"BAD_BOAT_ID\", postman.getEnvironmentVariable(\"newSlip_1_ID\"));",
+							"",
+							"var str = postman.getEnvironmentVariable(\"BAD_BOAT_ID\");",
+							"",
+							"var beginStr = \"/Boat\";",
+							"",
+							"var badStr = beginStr + str.slice(5);",
+							"",
+							"postman.setEnvironmentVariable(\"BAD_BOAT_ID\", badStr);",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat{{BAD_BOAT_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Pre-request Script builds a bad ID by retrieving a valid slip ID and mutating first 5 chars from \"/Slip\" to \"/Boat\".  Test appears here since we first need a slip ID to erronsusly mutate."
+			},
+			"response": []
+		},
+		{
+			"name": "getSlipByID Bad ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test Err_404 BAD_SLIP_ID\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"postman.setEnvironmentVariable(\"BAD_SLIP_ID\", postman.getEnvironmentVariable(\"newBoat_1_ID\"));",
+							"",
+							"var str = postman.getEnvironmentVariable(\"BAD_SLIP_ID\");",
+							"",
+							"var beginStr = \"/Slip\";",
+							"",
+							"var badStr = beginStr + str.slice(5);",
+							"",
+							"postman.setEnvironmentVariable(\"BAD_SLIP_ID\", badStr);",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat{{BAD_SLIP_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Pre-request Script builds a bad ID by retrieving a valid boat ID and mutating first 5 chars from \"/Boat\" to \"/Slip\".  Test appears here since we first need a slip ID to erronsusly mutate."
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBoats",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test H_01\"] = jsonData.length == 3;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/AllBoats",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAllSlips",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test I_01\"] = jsonData.length == 2;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/AllSlips",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"tests[\"Test J_01\"] = responseCode.code === 200;",
+							"tests[\"Test J_02\"] = jsonData.number === 1;",
+							"tests[\"Test J_03\"] = jsonData.departure_date === null;",
+							"tests[\"Test J_04\"] = jsonData.current_boat == postman.getEnvironmentVariable(\"newBoat_1_ID\");",
+							"tests[\"Test J_05\"] = jsonData.arrival_date == \"04/25/2017\";",
+							"tests[\"Test J_06\"] = jsonData.id === postman.getEnvironmentVariable(\"newSlip_1_ID\");",
+							"tests[\"Test J_07\"] = jsonData.departure_history === null;",
+							"tests[\"Test J_08\"] = jsonData.departed_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_1_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID Test at_sea Following Arrival",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test K_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_1_ID\");",
+							"tests[\"Test K_02\"] = jsonData.at_sea === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_1_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_2 Bad ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test L_01\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newSlip_1_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_2 No ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test M_01\"] = responseCode.code === 404;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps/",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test N_01\"] = responseCode.code === 403;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_2_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test P_01\"] = responseCode.code === 200;",
+							"tests[\"Test P_02\"] = jsonData.number === 2;",
+							"tests[\"Test P_03\"] = jsonData.departure_date === null;",
+							"tests[\"Test P_04\"] = jsonData.current_boat == postman.getEnvironmentVariable(\"newBoat_3_ID\");",
+							"tests[\"Test P_05\"] = jsonData.arrival_date == \"04/25/2017\";",
+							"tests[\"Test P_06\"] = jsonData.id === postman.getEnvironmentVariable(\"newSlip_2_ID\");",
+							"tests[\"Test P_07\"] = jsonData.departure_history === null;",
+							"tests[\"Test P_08\"] = jsonData.departed_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_3_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 2,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatDeparture_1 From Wrong Slip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 400\"] = responseCode.code === 400;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_1_ID}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 2,\n\t\"departure_date\": \"04/28/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatDeparture_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test Q_01\"] = jsonData.departure_date == \"04/28/2017\";",
+							"tests[\"Test Q_02\"] = jsonData.arrival_date === null;",
+							"tests[\"Test Q_03\"] = jsonData.departure_date == \"04/28/2017\";",
+							"tests[\"Test Q_04\"] = jsonData.number === 1;",
+							"tests[\"Test Q_05\"] = jsonData.id == postman.getEnvironmentVariable(\"newSlip_1_ID\");",
+							"tests[\"Test Q_06\"] = jsonData.departed_boat == postman.getEnvironmentVariable(\"newBoat_1_ID\");",
+							"tests[\"Test Q_07\"] = jsonData.current_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_1_ID}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 1,\n\t\"departure_date\": \"04/28/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID Test at_sea Following Departure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test R_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_1_ID\");",
+							"tests[\"Test R_02\"] = jsonData.at_sea === true;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_1_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "newBoat_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newBoat_4_ID\");",
+							"postman.setEnvironmentVariable(\"newBoat_4_ID\", jsonData.id);",
+							"",
+							"tests[\"Test S_01\"] = jsonData.at_sea === true;",
+							"tests[\"Test S_02\"] = jsonData.length == 444;",
+							"tests[\"Test S_03\"] = jsonData.type == \"Boat Type 04\";",
+							"tests[\"Test S_04\"] = jsonData.name == \"Boat Name 04\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Boat Name 04\",\n\t\"type\": \"Boat Type 04\",\n\t\"length\": 444\n}"
+				},
+				"description": "Creates a new boat with at_sea == True"
+			},
+			"response": []
+		},
+		{
+			"name": "newSlip_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"postman.clearEnvironmentVariable(\"newSlip_3_ID\");",
+							"postman.setEnvironmentVariable(\"newSlip_3_ID\", jsonData.id);",
+							"",
+							"tests[\"Test T_01\"] = jsonData.number == 3;",
+							"tests[\"Test T_02\"] = jsonData.current_boat === null;",
+							"tests[\"Test T_03\"] = jsonData.arrival_date === null;",
+							"tests[\"Test T_04\"] = jsonData.departure_history.departure_date === null;",
+							"tests[\"Test T_04\"] = jsonData.departure_history.departed_boat === null;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Slip",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "boatArrival_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Test U_01\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/DockOps{{newBoat_4_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 3,\n\t\"arrival_date\": \"04/25/2017\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test V_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_4_ID\");",
+							"tests[\"Test V_02\"] = jsonData.at_sea === false;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_4_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSlip_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Slip has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_3_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getBoatByID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test W_01\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_4_ID\");",
+							"tests[\"Test W_01\"] = jsonData.at_sea === true;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_4_ID}}",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_4",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Boat has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_4_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "modifyBoat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test X_01\"] = jsonData.length === 99;",
+							"tests[\"Test X_02\"] = jsonData.type == \"Boat Type 03\";",
+							"tests[\"Test X_03\"] = jsonData.at_sea === false;",
+							"tests[\"Test X_04\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_3_ID\");",
+							"tests[\"Test X_05\"] = jsonData.name == \"NewNameBoat 3\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_3_ID}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"NewNameBoat 3\",\n\t\"length\": 99\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "modifySlip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test Y_01\"] = jsonData.departure_date == \"04/28/2017\";",
+							"tests[\"Test Y_02\"] = jsonData.arrival_date == \"04/27/2017\";",
+							"tests[\"Test Y_03\"] = jsonData.number === 5;",
+							"tests[\"Test Y_04\"] = jsonData.id == postman.getEnvironmentVariable(\"newSlip_2_ID\");",
+							"tests[\"Test Y_05\"] = jsonData.departed_boat == postman.getEnvironmentVariable(\"newBoat_3_ID\");",
+							"tests[\"Test Y_06\"] = jsonData.current_boat == postman.getEnvironmentVariable(\"newBoat_1_ID\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_2_ID}}",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"number\": 5,\n    \"current_boat\": \"{{newBoat_1_ID}}\",\n    \"arrival_date\": \"04/27/2017\",\n    \"departed_boat\": \"{{newBoat_3_ID}}\",\n\t\"departure_date\": \"04/28/2017\" \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "replaceBoat",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test Z_01\"] = jsonData.length === null;",
+							"tests[\"Test Z_02\"] = jsonData.type == \"Assault Landing Craft 44\";",
+							"tests[\"Test Z_03\"] = jsonData.at_sea === true;",
+							"tests[\"Test Z_04\"] = jsonData.id == postman.getEnvironmentVariable(\"newBoat_2_ID\");",
+							"tests[\"Test Z_05\"] = jsonData.name == \"Predator44\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_2_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"Assault Landing Craft 44\",\n     \"name\": \"Predator44\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "replaceSlip",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"",
+							"tests[\"Test AA_01\"] = (jsonData.number === 5 || jsonData.number === 6);",
+							"tests[\"Test AA_02\"] = jsonData.departure_date == \"04/26/2017\";",
+							"tests[\"Test AA_03\"] = jsonData.current_boat == postman.getEnvironmentVariable(\"newBoat_3_ID\");",
+							"tests[\"Test AA_04\"] = jsonData.departed_boat == postman.getEnvironmentVariable(\"newBoat_2_ID\");",
+							"tests[\"Test AA_05\"] = jsonData.id == postman.getEnvironmentVariable(\"newSlip_1_ID\");",
+							"tests[\"Test AA_06\"] = jsonData.arrival_date == \"04/27/2017\";"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_1_ID}}",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": 5,\n    \"current_boat\": \"{{newBoat_3_ID}}\",\n    \"arrival_date\": \"04/27/2017\",\n    \"departed_boat\": \"{{newBoat_2_ID}}\",\n\t\"departure_date\": \"04/26/2017\"    \n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_1 Bad_ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 404\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat{{BAD_SLIP_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_1 NO ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 404\"] = responseCode.code === 404;"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/Boat/Boat/",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Boat has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_1_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Boat has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_2_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBoat_3",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Boat has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newBoat_3_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSlip_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Slip has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_1_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "deleteSlip_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Body matches string\"] = responseBody.has(\"Slip has been deleted!\");"
+						]
+					}
+				}
+			],
+			"request": {
+				"url": "https://boatslipsbychris.appspot.com/{{newSlip_2_ID}}",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,24 @@
+#--------------------------------------------
+# Chris Kearns, kearnsc@oregonstate.edu
+# CS496-400-S17, 7 May 2017
+# app.yaml configuration file.
+# OAuth 2.0 Implementation.
+#--------------------------------------------
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: www/index.html
+  upload: www/index.html
+
+- url: /clientAuth
+  script: clientAuth.app
+
+- url: /OAuth
+  script: OAuth.app
+
+- url: /www/css/style.css
+  static_files: www/css/style.css
+  upload: www/css/style.css

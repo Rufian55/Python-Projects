@@ -1,0 +1,52 @@
+/*---------------------------------------------------------
+Chris Kearns, kearnsc@oregonstate.edu
+CS496-400-S17, 7 May 2017, OAuth 2.0 Implementation.
+style.css presentation (look & feel) file for index.html
+and OAuth.py (thrown html5 mark up).
+----------------------------------------------------------*/
+body {
+	font:"Times New Roman", Times, serif;
+	background: #CCFFFF;
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#0033CC;
+	font-size:28px;
+	font-weight:bold;
+	padding-left:18px;
+	padding-top: 15px;
+	text-align:center;
+}
+
+h2{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#0033CC;
+	font-size:20px;
+	font-weight:bold;
+	padding-left:18px;
+	text-align:center;
+}
+
+h3{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#0645AD;
+	font-size:16px;
+	padding-left:8px;
+	text-align:center;
+}
+
+h4{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#FF0000;
+	font-size:18px;
+	font-weight:bold;
+	padding-left:8px;
+	text-align:center;
+}
+
+p{
+	text-align:center;
+}
