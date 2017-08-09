@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 """*************************************************************************************
-* CS372-400-S17, Project 1, 7 May 2017, Chris Kearns (kearnsc@oregonstate.edu)
 * chatServer.py is the source file for the server side chat module.
 * "Compile" with provided makefile - resulting file is chatserve with mode == 760.
 * You must start the chatserve server prior to running chatclient and use the
