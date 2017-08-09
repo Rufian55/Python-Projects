@@ -1,7 +1,6 @@
 #!/bin/python
 """-------------------------------------------------------------------------------------------------
 * ftclient.py is the client side source file for ftclient.
-* Chris Kearns, CS372-400-Spring_2017, Project 2, 4 June 2017. kearnsc@oregonstate.edu
 * Program is the client side of an ftp directory and file transfer program
 * utilizing defined ports from 1024 to 65535 and the commands -l and -g.
 * Command -l is for send/recv the directory listing the server process is running in.
