@@ -1,6 +1,4 @@
 ################################################################################
-# cs372-400-S17	Introduction to Networks	04 Jun 2017	Project 2
-# Chris Kearns		kearnsc@oregonstate.edu
 # File: makefile
 # Description: makefile for project 2 client side.
 # To execute the makefile, type "make", to delete the executable and 

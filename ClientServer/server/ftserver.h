@@ -1,7 +1,5 @@
 /********************************************************************************
 * Program ftserver.h is the header file for the ftserver compilation.
-* Chris Kearns, CS372-400-Spring_2017, Project 2, 4 June 2017
-* kearnsc@oregonstate.edu
 *********************************************************************************/
 #ifndef FTSERVER_H
 #define FTSERVER_H

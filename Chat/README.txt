@@ -1,7 +1,3 @@
-CS-372-400-S17, Chris Kearns, kearnsc@oregonstate.edu, 7 May 2017
-
-Assuming you have unzipped to a working directory on one of the OSU 
-three flip servers:
 
 zip payload:
 	README.txt (this file)

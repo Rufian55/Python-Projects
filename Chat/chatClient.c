@@ -1,5 +1,4 @@
 /****************************************************************************************
-* CS372-400-S17, Project 1, 7 May 2017, Chris Kearns (kearnsc@oregonstate.edu)
 * chatClient.c is the source file for the client side chat module.
 * Commpile individually as "gcc chatclient.c -g -Wall -o chatclient" or with provided
 * makefile.  You must start the chatserve server prior to running chatclient and use the
