@@ -10,7 +10,7 @@ ConsoleColor: How to print to a linux console in color and basic file handling..
 
 HarborMaster: A harbor management / boat and slip handling app for a Harbor Master - runs on Google Cloud NDB.
 
-OAuth2: Basics of client authorization via Google+.
+OAuth2: Basics of client authorization via Google+.  https://chrisauth-166416.appspot.com/
 
 QuoteTrack_API: The client account handling portion of the QuoteTrack Android App - manages user accounts and portfolio contents.
 
